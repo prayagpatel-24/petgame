@@ -1,8 +1,6 @@
-# EVOLVING LIFE - FBLA Intro to Programming 2025-2026
+# EVOLVING LIFE
 
 **Author:** Prayag Patel  
-**Event:** Georgia FBLA Introduction to Programming
-**Date:** January 2026
 
 ## Project Overview
 
