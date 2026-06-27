@@ -1,0 +1,238 @@
+print(f"""
+================ HOW TO PLAY: EVOLVING LIFE ================
+
+EVOLVING LIFE is a console-based pet game where you take care of a pet and
+manage the cost of caring for it using sparks (the in-game money).
+
+The goal is to keep your pet happy, healthy, and not go broke on sparks.
+
+---------------- STARTING A GAME ----------------
+
+When you launch the program:
+
+1. You will see:
+   1. New Game
+   2. Load Game
+
+2. New Game:
+   - Type 1
+   - Enter your pet's name.
+   - Enter the pet species (dog, cat, dragon, etc.).
+   - The game starts on Day 1 with some basic supplies in your inventory.
+
+3. Load Game:
+   - Type 2
+   - Choose a save slot.
+   - If the slot has a pet, it will load that saved game.
+
+---------------- MAIN STATS ----------------
+
+Your pet has several important stats:
+
+- Hunger: how hungry your pet is (high hunger is bad).
+- Thirst: how thirsty your pet is (high thirst is bad).
+- Energy: how tired your pet is (low energy is bad).
+- Hygiene: how clean your pet is (low hygiene is bad).
+- Happiness: how happy your pet is (low happiness can make them sad or leave).
+- Health: overall health (if this gets too low, things go badly).
+- Skill Points: points you can spend in the Skill Tree.
+
+Your player stats:
+
+- Day and Week: track how long you've been playing.
+- Sparks: your money.
+- Income: how much you've earned like through your weekly allowance.
+- Expenses: how much you've spent on your pet.
+
+Inventory:
+
+- Food: used to feed your pet.
+- Water: used to give your pet a drink.
+- Soap: used to clean your pet.
+
+---------------- MENUS AND CONTROLS ----------------
+
+During the main game loop you will see a menu like this:
+
+1. Feed
+2. Water
+3. Clean
+4. Play
+5. Inventory
+6. Skill Tree
+7. Store
+8. Save
+9. Next Day
+10. Health Check
+0. Quit
+
+You always control the game by typing the number shown and pressing Enter.
+
+If you type something that is not a valid menu number, the game tells you
+it is not a correct option and you will be prompted to enter a valid option.
+
+---------------- WHAT EACH ACTION DOES ----------------
+
+1. Feed
+   - Uses 1 Food from your inventory.
+   - Lowers Hunger.
+   - Increases Happiness a little.
+   - If you run out of Food, you have to buy more from the store.
+
+2. Water
+   - Uses 1 Water from your inventory.
+   - Lowers Thirst.
+   - If you run out of Water, you need to buy more.
+
+3. Clean
+   - Uses 1 Soap from your inventory.
+   - Increases Hygiene.
+   - Also gives a small Happiness boost.
+   - If Hygiene gets too low, it will hurt Health over time.
+
+4. Play
+   - Increases Happiness.
+   - Uses up Energy.
+   - Increases Hunger a bit.
+   - Good for keeping your pet happy, but don't overdo it if they are exhausted.
+
+5. Inventory
+   - Shows how much Food, Water, and Soap you have left.
+
+6. Skill Tree
+   - Lets you spend Skill Points your pet has earned.
+   - Skills:
+     - Agility
+     - Intelligence
+     - Strength
+     - Charm
+   - When your pet has Skill Points, you can upgrade these skills to make your pet
+     feel like it is developing over time.
+
+7. Store
+   - Where you buy Food, Water, and Soap.
+   - Food costs 10 sparks.
+   - Water costs 5 sparks.
+   - Soap costs 8 sparks.
+   - Every purchase adds to your expenses and subtracts sparks.
+
+8. Save
+   - Opens the save/load menu.
+   - You can save to a slot, load from a slot, or clear a slot.
+   - Saving ties your current game to a save slot (like slot1).
+   - After that, the game can autosave changes to that slot.
+
+9. Next Day
+   - Moves the game forward to the next day.
+   - A random event happens (good, neutral, or bad) which can change Happiness
+     and a little Health.
+   - Your pet may earn Skill Points based on Happiness.
+   - Every 7 days, you get a weekly bonus of 20 sparks.
+   - There is a simple care check: if Hunger or Thirst are too high or Hygiene is
+     too low, your pet loses some Health.
+   - At the end of the day you see a summary:
+     - Day number
+     - Current sparks
+     - Total expenses
+     - Updated stats
+
+10. Health Check
+   - Shows your pet's current Health and a short description:
+     - Healthy and strong
+     - Okay but could be better
+     - Not doing well
+   - From here you can:
+     1. Visit the vet (costs 25 sparks)
+        - Increases Health a lot.
+        - Increases Happiness a bit.
+        - Adds 25 sparks to your expenses.
+     2. Go back
+        - Do nothing if you can't afford it or don't want to.
+
+0. Quit
+   - Leaves the game loop.
+   - If your game is connected to a save slot, the newest state can be saved
+     so you can continue later.
+
+---------------- MOOD AND RUNNING AWAY ----------------
+
+Your pet's mood is based on Happiness:
+
+- Very low Happiness: mood becomes "Ran Away" and the pet leaves.
+- Low Happiness: "Sad".
+- Medium Happiness: "Okay".
+- Higher Happiness: "Happy".
+- Very high Happiness: "Energetic".
+
+If you never feed, water, clean, play, or rest your pet, Happiness and Health
+will get worse. Eventually, the pet can run away and the game will end.
+
+---------------- COST OF CARE AND MONEY ----------------
+
+Sparks are the money you use to take care of your pet.
+
+You SPEND sparks on:
+- Food (10 per item)
+- Water (5 per item)
+- Soap (8 per item)
+- Vet visits (25 each)
+
+You EARN sparks from:
+- Weekly bonus: every 7 days you get +20 sparks.
+
+The game tracks:
+- sparks: how much you currently have.
+- expenses: total sparks you spent over time.
+- income: total sparks you earned from bonuses.
+
+At the end of each day you see how your money is doing. If you waste all
+your sparks, it gets harder to buy food, water, soap, and vet care. This
+shows the cost of caring for a real pet and why budgeting matters.
+
+---------------- SAVING, LOADING, AND SLOTS ----------------
+
+The game uses a file called saves.json to store your save data.
+
+Save slots:
+- slot1
+- slot2
+- slot3
+- slot4
+
+In the save/load menu:
+- You see each slot with either:
+  - EMPTY
+  - Or the name of the pet in that slot and the day.
+- You can choose a slot to save your current game.
+- You can choose a slot to load an existing game.
+
+Clearing a slot:
+- There is an option to clear a slot.
+- It will ask if you really want to clear it.
+- If you say yes, that slot becomes EMPTY again.
+
+------------------------ GOALS ------------------------
+
+There isn't a real way to win but you can think of winning as:
+
+- Keeping your pet alive, healthy, and happy for many days.
+- Managing sparks so you don't go broke.
+- Growing your pet's skills and watching its stats change over time.
+
+However you can lose if your pet's Happiness gets so low that it runs away or
+if its health goes too low and it dies.
+
+---------------- Most Important Tips ----------------
+
+- Don't ignore Hunger and Thirst. High values can slowly damage Health.
+- Keep an eye on Hygiene; dirty pets are not happy or healthy.
+- Use Rest when Energy is low so your pet doesn't get completely drained.
+- Spend Skill Points whenever you have them so your pet feels like it is improving.
+- Try not to burn through sparks too fast. Think before you buy everything.
+- Use Health Check and the vet when Health drops too low.
+- Remember to save your game to a slot so you can load it later.
+
+If you balance care and money, your pet will stay around longer, be happier,
+and you will get the most out of EVOLVING LIFE.
+===========================================================
+""")

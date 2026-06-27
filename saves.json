@@ -1,0 +1,143 @@
+{
+    "slot1": {
+        "pet": {
+            "name": "Gary",
+            "species": "Greyhound",
+            "hunger": 11,
+            "thirst": 34,
+            "energy": 92,
+            "hygiene": 77,
+            "happiness": 95,
+            "health": 98,
+            "age_days": 74,
+            "skill_points": 9,
+            "skills": {
+                "Agility": 12,
+                "Intelligence": 8,
+                "Strength": 9,
+                "Charm": 7
+            },
+            "traits": [
+                "Fast Runner",
+                "Loyal"
+            ],
+            "titles": [
+                "Champion Sprinter"
+            ]
+        },
+        "player": {
+            "day": 77,
+            "week": 11,
+            "sparks": 98,
+            "income": 200,
+            "expenses": 325,
+            "inventory": {
+                "Food": 7,
+                "Water": 12,
+                "Soap": 5
+            }
+        }
+    },
+    "slot2": {
+        "pet": {
+            "name": "Gray",
+            "species": "Lizard",
+            "hunger": 23,
+            "thirst": 40,
+            "energy": 90,
+            "hygiene": 57,
+            "happiness": 54,
+            "health": 100,
+            "age_days": 0,
+            "skill_points": 3,
+            "skills": {
+                "Agility": 0,
+                "Intelligence": 0,
+                "Strength": 0,
+                "Charm": 0
+            },
+            "traits": [],
+            "titles": []
+        },
+        "player": {
+            "day": 2,
+            "week": 1,
+            "sparks": 90,
+            "income": 0,
+            "expenses": 10,
+            "inventory": {
+                "Food": 5,
+                "Water": 5,
+                "Soap": 2
+            }
+        }
+    },
+    "slot3": {
+        "pet": {
+            "name": "fjfd",
+            "species": "fd",
+            "hunger": 30,
+            "thirst": 30,
+            "energy": 70,
+            "hygiene": 70,
+            "happiness": 50,
+            "health": 100,
+            "age_days": 0,
+            "skill_points": 0,
+            "skills": {
+                "Agility": 0,
+                "Intelligence": 0,
+                "Strength": 0,
+                "Charm": 0
+            },
+            "traits": [],
+            "titles": []
+        },
+        "player": {
+            "day": 1,
+            "week": 1,
+            "sparks": 100,
+            "income": 0,
+            "expenses": 0,
+            "inventory": {
+                "Food": 5,
+                "Water": 5,
+                "Soap": 2
+            }
+        }
+    },
+    "slot4": {
+        "pet": {
+            "name": "Gray",
+            "species": "Dragon",
+            "hunger": 38,
+            "thirst": 35,
+            "energy": 90,
+            "hygiene": 56,
+            "happiness": 56,
+            "health": 100,
+            "age_days": 0,
+            "skill_points": 3,
+            "skills": {
+                "Agility": 0,
+                "Intelligence": 0,
+                "Strength": 0,
+                "Charm": 0
+            },
+            "traits": [],
+            "titles": []
+        },
+        "player": {
+            "day": 2,
+            "week": 1,
+            "sparks": 100,
+            "income": 0,
+            "expenses": 0,
+            "inventory": {
+                "Food": 5,
+                "Water": 5,
+                "Soap": 2
+            }
+        }
+    }
+}
